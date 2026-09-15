@@ -57,7 +57,16 @@ services:
                 - servicios
         depends_on: 
             - servicio-eureka-server 
-
+    proyungas-gestor:
+        build: ./proyungas-gestor
+        image: proyungas-gestor:v1
+        restart: always
+        networks: 
+                - servicios
+        depends_on: 
+            - servicio-eureka-server
+            - postgres-gestor
+            
     proyungas-files:
         build: ./proyungas-files
         image: proyungas-files:v1
