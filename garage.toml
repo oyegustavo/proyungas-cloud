@@ -1,0 +1,20 @@
+# =====================================================================
+# CONFIGURACIÓN DE NIVEL SUPERIOR (Debe ir al inicio del archivo)
+# =====================================================================
+replication_factor = 1
+db_engine = "sqlite"
+
+metadata_dir = "/var/lib/garage/meta"
+data_dir = "/var/lib/garage/data"
+
+# Tu clave de 64 caracteres
+rpc_secret = "049e95ec0646f1f931358c0aab340d3b84606c1ae96807bc2b6059fdc9a49bcd"
+rpc_bind_addr = "[::]:3901"
+
+# =====================================================================
+# BLOQUES SECUNDARIOS (Siempre al final)
+# =====================================================================
+[s3_api]
+s3_region = "garage"
+api_bind_addr = "[::]:3900"
+root_domain = ".s3.garage.localhost"
