@@ -41,6 +41,8 @@ services:
     proyungas-gestor:
         build: ./proyungas-gestor
         image: proyungas-gestor:v1
+        ports:
+          - "8094:8094"
         restart: always
         networks: 
                 - servicios
