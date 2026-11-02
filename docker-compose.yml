@@ -10,10 +10,7 @@ services:
         networks:
           - servicios
         restart: always
-        volumes:
-          - pgdata:/var/lib/postgresql/data
-        ports:
-        - "5434:5432"   # expose Postgres to host
+
     servicio-eureka-server:
         build: ./proyungas/servicio-eureka-server-master
         image: springboot-servicio-eureka-server:v1
